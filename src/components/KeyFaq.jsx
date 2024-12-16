@@ -30,10 +30,10 @@ const KeyFaq = () => {
                 </div>
                 <div className="max-w-[552px] pt-4 flex flex-col gap-4 pb-6 mx-auto max-md:gap-2 max-sm:gap-1 max-md:pb-3">
                     {FAQ_LIST.map((obj, i) => (
-                        <div key={i} className="py-4 border-b border-silver">
+                        <div key={i} className={`pt-2 pb-4 border-b border-silver ${i === 0 ? "border-t border-silver pt-4" : ""}`}>
                             <button
                                 onClick={() => toggleAccordion(i)}
-                                className="flex justify-between w-full items-center text-lg text-blue-dark leading-custom-4xl font-medium"
+                                className="flex justify-between w-full items-center text-lg text-blue-dark leading-custom-4xl font-medium max-md:text-base"
                             >
                                 {obj.question}
                                 <span className={`ml-2 ${openIndex === i ? "rotate-180" : "rotate-0"} duration-500 ease-linear transition-all`}><FaqArrow /></span>
@@ -42,13 +42,13 @@ const KeyFaq = () => {
                                 className={`flex flex-col overflow-hidden transition-[max-height] duration-700 ease-linear ${openIndex === i ? "max-h-[440px] max-md:max-h-[640px]" : "max-h-0"
                                     }`}
                             >
-                                <p className="pt-4">{obj.answerOne}</p>
-                                <p className="pt-3">{obj.answerTwo}</p>
+                                <p className="pt-4 text-base font-normal text-blue-dark tracking-tight leading-custom-175 max-md:text-sm">{obj.answerOne}</p>
+                                <p className="pt-3 text-base font-normal text-blue-dark tracking-tight leading-custom-175 max-md:text-sm">{obj.answerTwo}</p>
                                 <div className="flex gap-3 py-4">
                                     <img className="max-w-[268px] w-full" src={obj.imgOne} alt="faq-image" />
                                     <img className="max-w-[268px] w-full" src={obj.imgTwo} alt="faq-imgage" />
                                 </div>
-                                <p>{obj.answerThree}</p>
+                                <p className="text-base font-normal text-blue-dark tracking-tight leading-custom-175 max-md:text-sm">{obj.answerThree}</p>
                             </div>
                         </div>
                     ))}

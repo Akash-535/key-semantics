@@ -8,6 +8,7 @@ import Headless from './components/Headless';
 import DataHosting from './components/DataHosting';
 import SemanticsInput from './components/SemanticsInput';
 import Footer from './common/Footer';
+import BackToTop from './common/BackToTop';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <DataHosting />
       <SemanticsInput />
       <Footer />
+      <BackToTop />
     </>
   );
 }
