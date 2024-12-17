@@ -45,8 +45,8 @@ const KeyFaq = () => {
                                 <p className="pt-4 text-base font-normal text-blue-dark tracking-tight leading-custom-175 max-md:text-sm">{obj.answerOne}</p>
                                 <p className="pt-3 text-base font-normal text-blue-dark tracking-tight leading-custom-175 max-md:text-sm">{obj.answerTwo}</p>
                                 <div className="flex gap-3 py-4">
-                                    <img className="max-w-[268px] w-full" src={obj.imgOne} alt="faq-image" />
-                                    <img className="max-w-[268px] w-full" src={obj.imgTwo} alt="faq-imgage" />
+                                    <img className="max-w-[268px] w-full max-md:max-w-52 max-sm:max-w-40" src={obj.imgOne} alt="faq-image" />
+                                    <img className="max-w-[268px] w-full max-md:max-w-52 max-sm:max-w-40" src={obj.imgTwo} alt="faq-imgage" />
                                 </div>
                                 <p className="text-base font-normal text-blue-dark tracking-tight leading-custom-175 max-md:text-sm">{obj.answerThree}</p>
                             </div>
